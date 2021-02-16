@@ -3,32 +3,35 @@
 int largest(int array[], int length) {
   //loop through length of array
   for (int i = 0; i < length; i++) {
-
+    if (array[i] > array[0]){
+      array[0] = array[i];
+    }
   }
-  return -1;
+  return array[0];
 }
 
 int sum(int array[], int length) {
     //loop through length of array
   for (int i = 0; i < length; i++){
+    
   } 
-  return -1;
+  return 0;
 }
 
 void swap(int *a, int *b) {
   //swap for 2 vars
-  int t = *a;
-  *a = *b;
-  *b = t;
+  int t = *a; //a's value into temp
+  *a = *b; //b's value into a
+  *b = t; //a's value into b
 }
 
 void rotate(int *a, int *b, int *c) {
   //swap for 3 vars
-  int t = *a;
-  int t2 = *b;
-  *a = *c;
-  *b = t;
-  *c = t2;
+  int t = *a; //a's value into temp
+  int t2 = *b; //b's value into temp2
+  *a = *c; //c's value into a
+  *b = t; //a's value into b
+  *c = t2; //b's value into c
 }
 
 void sort(int array[], int length) {
