@@ -36,11 +36,27 @@ void rotate(int *a, int *b, int *c) {
 }
 
 void sort(int array[], int length) {
+      //loop through length of array
+  for (int i = 0; i < length; i++){
+    //minus i because already went thru i times
+    //minus 1 because comparing to j+1
+    for (int j = 0; j < length-i-1; j++){
+      if (array[j] > array[j+1]){
+        swap(&array[j], &array[j+1]);
+      }
+    }
+  }
 }
 
 void double_primes(int array[], int length) {
+      //loop through length of array
+  for (int i = 0; i < length; i++){
+
+  }
 }
-
 void negate_armstrongs(int array[], int length) {
+        //loop through length of array
+  for (int i = 0; i < length; i++){
 
+}
 }
