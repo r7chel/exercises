@@ -2,7 +2,7 @@
 
 int largest(int array[], int length) {
   //loop through length of array
-  for (int i = 0; i < length, i++) {
+  for (int i = 0; i < length; i++) {
 
   }
   return -1;
@@ -10,7 +10,7 @@ int largest(int array[], int length) {
 
 int sum(int array[], int length) {
     //loop through length of array
-  for (int i = 0; i < length, i++){
+  for (int i = 0; i < length; i++){
   } 
   return -1;
 }
