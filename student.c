@@ -12,10 +12,11 @@ int largest(int array[], int length) {
 
 int sum(int array[], int length) {
     //loop through length of array
+  int sum = 0;
   for (int i = 0; i < length; i++){
-    
+    sum += array[i];
   } 
-  return 0;
+  return sum;
 }
 
 void swap(int *a, int *b) {
