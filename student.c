@@ -1,5 +1,6 @@
 #include "student.h"
 
+
 int largest(int array[], int length) {
   //loop through length of array
   for (int i = 0; i < length; i++) {
@@ -52,7 +53,13 @@ void double_primes(int array[], int length) {
       //loop through length of array
   for (int i = 0; i < length + 1; i++){
     int notprime = 0;
-    for (int j = 2; j < i/2; j++){
+    for (int j = 2; j < array[i]/2; j++){
+      if (array[i] % j == 0){
+        notprime = 1;
+        break;
+      }
+    }
+    for (int j = 3; j < i/3; j++){
       if (i % j == 0){
         notprime = 1;
         break;
@@ -65,27 +72,43 @@ void double_primes(int array[], int length) {
     }
   
   }
+
   
 }
+
+int power(int x, int exp){
+  int final = 1;
+  for (int i = 0; i < exp; i++){
+    final *= x;
+  }
+  return final;
+}
+
+
 void negate_armstrongs(int array[], int length) {
-        //loop through length of array
+  //var for sum of all digits to the power of len
   int total = 0;
+  //loop through length of array
   for (int i = 0; i < length; i++){
-    //number of digits in array[i]
+    //var for number of digits in array[i]
     int len = 0;
-    //temps for array[i]
+    //temps for value in array[i]
     int t = array[i];   
     int t2 = array[i];
-    while (t){
+    //get length of array[i]
+    while (t>0){
       t /= 10;
       len += 1;
     }
     while (t2>0){
-    int digit = t2 % 10;
-   // total += digit ** len;
-    t2 /= 10;
+      //var for each digit in array[i]
+      int dig = t2 % 10;
+      total += power(dig,len);
+      t2 /= 10;
     }
-  
+    if (array[i] == total && array[i] > 0) {
+      array[i] *= -1;
+    }
 
   }
 }
