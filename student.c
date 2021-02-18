@@ -1,4 +1,5 @@
 #include "student.h"
+#include <stdio.h>
 
 
 int largest(int array[], int length) {
@@ -86,10 +87,11 @@ int power(int x, int exp){
 
 
 void negate_armstrongs(int array[], int length) {
-  //var for sum of all digits to the power of len
-  int total = 0;
+
   //loop through length of array
   for (int i = 0; i < length; i++){
+      //var for sum of all digits to the power of len
+    int total = 0;
     //var for number of digits in array[i]
     int len = 0;
     //temps for value in array[i]
@@ -109,6 +111,6 @@ void negate_armstrongs(int array[], int length) {
     if (array[i] == total && array[i] > 0) {
       array[i] *= -1;
     }
-
+  // printf("%d \n", total);
   }
 }
