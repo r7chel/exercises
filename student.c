@@ -38,7 +38,7 @@ void rotate(int *a, int *b, int *c) {
 }
 
 void sort(int array[], int length) {
-      //loop through length of array
+  //loop through length of array
   for (int i = 0; i < length; i++){
     //minus i because already went thru i times
     //minus 1 because comparing to j+1
@@ -51,7 +51,7 @@ void sort(int array[], int length) {
 }
 
 void double_primes(int array[], int length) {
-      //loop through length of array
+  //loop through length of array
   for (int i = 0; i < length + 1; i++){
     int notprime = 0;
     for (int j = 2; j < array[i]/2; j++){
@@ -66,15 +66,10 @@ void double_primes(int array[], int length) {
         break;
       }
     }
-
       if (notprime==0 && i > 1 && array[i] >= 0) {
-
         array[i] = array[i]*2;
     }
-  
   }
-
-  
 }
 
 int power(int x, int exp){
@@ -84,7 +79,6 @@ int power(int x, int exp){
   }
   return final;
 }
-
 
 void negate_armstrongs(int array[], int length) {
 
